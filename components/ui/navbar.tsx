@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import NavLink from "./nav-link";
 import MobileMenu from "./mobile-menu";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
@@ -21,13 +22,15 @@ const Navbar = () => {
     <header className="w-full bg-[#f8f4eb] border-b border-[#454699]/10">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-          <Image 
-            src="/images/logo.png" 
-            alt="Logo Freewin" 
-            width={120} 
-            height={50}
-            className="object-contain"
-          />
+          <Link href="/">
+            <Image 
+              src="/images/logo.png" 
+              alt="Logo Freewin" 
+              width={120} 
+              height={50}
+              className="object-contain hover:opacity-80 transition-opacity"
+            />
+          </Link>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">

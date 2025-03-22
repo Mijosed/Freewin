@@ -1,11 +1,48 @@
-import React from 'react';
+"use client";
 
-export default function AboutPage() {
+import { motion } from "framer-motion";
+
+const AboutPage = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div className="container mx-auto px-4 py-12">
-      <section className="max-w-4xl mx-auto mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">Qui sommes nous</h1>
-        
+    <motion.div
+      className="container mx-auto px-4 py-12"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.h1 
+        className="text-4xl md:text-5xl font-bold mb-8 text-center text-[#454699]"
+        variants={itemVariants}
+      >
+        Qui sommes nous
+      </motion.h1>
+
+      <motion.div 
+        className="max-w-3xl mx-auto space-y-6"
+        variants={itemVariants}
+      >
         <div className="bg-white shadow-md rounded-lg p-8 mb-12">
           <h2 className="text-2xl font-bold mb-4">Notre histoire</h2>
           <p className="mb-4">
@@ -46,7 +83,9 @@ export default function AboutPage() {
             Voir nos offres d'emploi
           </button>
         </div>
-      </section>
-    </div>
+      </motion.div>
+    </motion.div>
   );
-} 
+};
+
+export default AboutPage; 
