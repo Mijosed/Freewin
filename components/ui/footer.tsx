@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
           
           <div className="text-[#454699] text-sm">
-            Site réalisé par Mijosé Difuidi
+            Site réalisé par KimDev
           </div>
         </div>
       </div>

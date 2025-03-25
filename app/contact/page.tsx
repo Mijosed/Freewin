@@ -124,17 +124,6 @@ const ContactPage = () => {
       initial="hidden"
       animate="visible"
     >
-      <motion.div variants={itemVariants}>
-        <Link href="/" className="block w-fit mx-auto mb-8">
-          <Image 
-            src="/images/logo.png" 
-            alt="Logo Freewin" 
-            width={120} 
-            height={50}
-            className="object-contain hover:opacity-80 transition-opacity"
-          />
-        </Link>
-      </motion.div>
 
       <motion.section 
         className="max-w-2xl mx-auto mb-16"
