@@ -1,6 +1,8 @@
 import Image from "next/image";
 import HeroHeader from '@/components/ui/hero-header';
 import Link from 'next/link';
+import FreelancersSection from '@/components/sections/freelancers-section';
+
 export default function Home() {
   return (
     <main>
@@ -80,6 +82,9 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+        {/* Section des freelances */}
+        <FreelancersSection />
 
         <section className="bg-[#f4bff5] rounded-lg p-8 text-center mb-16">
           <h2 className="text-2xl font-bold mb-4">Rejoignez-nous dès aujourd'hui</h2>
